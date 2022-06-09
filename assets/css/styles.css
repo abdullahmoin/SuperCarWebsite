@@ -110,7 +110,7 @@ img {
 
 /* ======== Shape Design ======*/
 
-.shape{
+.home .shape{
   background-color: hsla(219, 33%, 32%, .5);
   filter:blur(112px);
   border-radius: 50%;
@@ -125,6 +125,12 @@ img {
   width: 300px;
   height: 300px;
 
+}
+
+.shape__smaller{
+  width: 180px;
+  /* height: 180px; */
+  /* filter: blur(64px); */
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -318,7 +324,7 @@ padding-top: 9rem;
   border-radius: 50%;
   box-shadow: 0 0 12px hsl(158, 98%, 43%);
   transition: .3s;
-  animation: button;
+  animation: button 3s infinite; 
 
 }
 
@@ -329,7 +335,7 @@ padding-top: 9rem;
 
 .home .shape__big{
   left: -9rem;
-  right: -4rem;
+  top: -4rem;
 }
 .home .shape__small{
   right: -10rem;
@@ -405,9 +411,91 @@ padding-top: 9rem;
 
 /*=============== POPULAR ===============*/
 
+.popular__container{
+  padding-top: 1rem;
+
+}
+.popular__card{
+  position: relative;
+  width: 238px;
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+}
+/* .popular__card .shape__smaller{
+  position: absolute;
+  top: -2.5rem;
+  left: -2.5rem;
+} */
+
+.popular__title,
+.popular__subtitle,
+.popular__img{
+  position: relative;
+}
+.popular__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: 0.25rem;
+
+}
+.popular__subtitle{
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  font-weight: 400;
+
+}
+.popular__img{
+  width: 160px;
+  margin: .75rem 0 1.25rem 1.5rem;
+  transition: .3s;
+}
+.popular__data{
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: .5rem 1.25rem;
+  margin-bottom: 2rem;
+}
+.popular__data-group{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-size: var(--smaller-font-size);
+  color: var(--white-color);
+
+}
+.popular__data i{
+  font-size: 1rem;
+}
+.popular__price{
+  font-size: var(--h3-font-size);
+}
+.popular__button{
+  border: none;
+  outline: none;
+  padding: .75rem 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 1rem 0 1rem 0;
+  cursor: pointer;
+}
+.popular__button i{
+  font-size: 1.25rem;
+}
+.popular__card:hover .popular__img{
+  transform: translateY(-.5rem);
+}
 
 /* Swiper class */
 
+.swiper-pagination-bullet{
+  background: var(--text-color);
+}
+.swiper-pagination-bullet-active{
+  background-color: var(--first-color);
+}
 
 /*=============== FEATURES ===============*/
 
