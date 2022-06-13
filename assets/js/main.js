@@ -38,6 +38,31 @@ function scrollHeader() {
 }
 window.addEventListener('scroll', scrollHeader)
 
+/*===============  JS FOR VIDEO SLIDER ===============*/
+const btns = document.querySelectorAll(".slider__bg-navBtn");
+const slides = document.querySelectorAll(".video__slide");
+
+var sliderNav = function(manual){
+    btns.forEach((btn) => {
+        btn.classList.remove("active");
+    });
+
+    slides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+
+    btns[manual].classList.add("active");
+    slides[manual].classList.add("active");
+}
+
+btns.forEach((btn, i) =>{
+    btn.addEventListener("click", () => {
+        sliderNav(i);
+    });
+});
+
+
 /*=============== POPULAR SWIPER ===============*/
 
 let swiperPopular = new Swiper(".popular__container", {
@@ -76,7 +101,7 @@ let mixerFeatured = mixitup('.featured__content', {
     }
 });
 
-/* Link active featured */
+/* Link active color featured */
 
 const linkFeatured = document.querySelectorAll('.featured__item');
 
@@ -117,6 +142,11 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
+
+const d = new Date();
+document.getElementById("date").innerHTML = d;
+
+
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 
 const sr = ScrollReveal({
@@ -127,6 +157,7 @@ const sr = ScrollReveal({
     //reset: true
 })
 
+
 sr.reveal(`.home__title, .popular__container, .features__img, .featured__filters`);
 sr.reveal(`.home__subtitle`, {delay: 500});
 sr.reveal(`.home__elec`, {delay: 600});
@@ -135,8 +166,8 @@ sr.reveal(`.home__car-data, .footer__copy`, {delay: 900, interval: 100, origin: 
 sr.reveal(`.home__button`, {delay: 1000, origin: 'bottom'});
 
 sr.reveal(`.about__group, .offer__data`, {origin: 'left'});
-sr.reveal(`.about__data, .offer__img`, {origin: 'right'});
+sr.reveal(`.about__data, .offer__img, .home__social-icon`, {origin: 'right'});
 
-sr.reveal(`.features__map`, {delay:600, origin: 'bottom'});
+sr.reveal(`.features__map, .slider__bg`, {delay:600, origin: 'bottom'});
 sr.reveal(`.features__card`, {interval: 300});
 sr.reveal(`.featured__card, .logos__content, .footer__content`, {interval: 100});
