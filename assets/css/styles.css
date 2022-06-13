@@ -364,7 +364,7 @@ padding-top: 9rem;
   
 }
 .slider__bg{
- 
+  z-index: 888 !important;
   position: relative;
   display: flex;
   justify-content: center;
@@ -375,7 +375,7 @@ padding-top: 9rem;
 
 }
 .slider__bg-navBtn{
-  z-index: 888;
+  z-index: var(--z-fixed) !important;
   width: 9px;
   height: 9px;
   background: rgba(255, 255, 255, 0.392);
@@ -1061,6 +1061,11 @@ transform: scale(1.2);
   .home__social-icon{
     visibility: visible !important;
   }
+  .slider__bg-navBtn{
+    z-index: var(--z-fixed);
+  }
+
+
   .about__container{
     column-gap: 6rem;
     align-items: center;
