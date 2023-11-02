@@ -552,7 +552,7 @@ transform: scale(1.2);
 }
 .popular__button{
   border: none;
-  outline: none;
+  outline-color: transparent;
   padding: .75rem 1rem;
   position: absolute;
   right: 0;
@@ -658,7 +658,7 @@ transform: scale(1.2);
   width: 48px;
   height: 48px;
   border: none;
-  outline: none;
+  outline-color: transparent;
   padding: 0.75rem;
   border-radius: .75rem;
   background-color: var(--container-color);
@@ -730,7 +730,7 @@ transform: scale(1.2);
 }
 .featured__button{
   border: none;
-  outline: none;
+  outline-color: transparent;
   padding: .75rem 1rem;
   position: absolute;
   right: 0;
